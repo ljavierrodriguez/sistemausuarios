@@ -24,3 +24,10 @@ CREATE TABLE user_roles (
   CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
   CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 )ENGINE = InnoDB;
+
+
+INSERT INTO roles (`name`) values ('Administrador'), ('Supervisor'), ('Vigilante');
+
+INSERT INTO users (`name`, `email`, `phone`, `age`) values ('Luis Rodriguez', 'ljavierrodriguez@gmail.com', '+584129957285', '35');
+
+INSERT INTO user_roles (`user_id`, `role_id`) values (1,1), (1,2);
